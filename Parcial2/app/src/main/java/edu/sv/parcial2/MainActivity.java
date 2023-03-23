@@ -11,7 +11,22 @@ public class MainActivity extends AppCompatActivity {
             "Liliana Clarence", "Benito Peralta",
             "Juan Jaramillo", "Christian Steps","Alexa Giraldo",
             "Linda Murillo","Lizeth Astrada"};
+
+    String [] cargo={"CEO",
+            "Asistente",
+            "Director de Marketing",
+            "Diseñadora de Producto",
+            "Supevisor de Ventas","CEO","CTO","Lead Porgrammer",
+            "Directora de Marketing","CEO"
+
+    };
+    String [] compania={"Insures S.O"," Hospital Blue","Electrical Parts itd",
+            "Neumaticos press"," Banco Nacional","Cooperativa Verde",
+            "Frutisoft","Seguros Boliver","Concesionario Motolox"
+
+    };
     ListView lvstEmpleado;
+
             Integer[]Imgempleado={ R.drawable.lead_photo_1,
                     R.drawable.lead_photo_2,
                     R.drawable.lead_photo_3,
@@ -25,9 +40,11 @@ public class MainActivity extends AppCompatActivity {
             @Override protected void onCreate(Bundle savedInstanceState) {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.activity_main);
-                AdapPersona adaptador = new AdapPersona(this, empleado, Imgempleado);
+                AdapPersona adaptador = new AdapPersona(this, empleado,cargo,compania, Imgempleado);
                 lvstEmpleado = findViewById(R.id.lvpersonas);
                 lvstEmpleado.setAdapter (adaptador);
+
+
             }
 }
 

@@ -9,18 +9,35 @@ import android.widget.TextView;
 
     public class AdapPersona extends ArrayAdapter<String> {
         Activity contex;
+
         String []persona;
+        String []cargo;
+        String []compania;
         Integer [] Imgpersona;
         ImageView imgfoto;
         TextView tvxNombre;
-        public AdapPersona(Activity contex, String[]persona,Integer[] Imgpersona) {
-            super(contex, R.layout.personas, persona);
-            this.contex = contex; this.persona = persona;
-            this.Imgpersona = Imgpersona; }
+        TextView txvcargo;
+        TextView txvcomapnia;
+        public AdapPersona(Activity contex, String[]persona, String[]cargo,String[]compania, Integer[]Imgpersona) {
+            super(contex, R.layout.personas,persona);
+            this.contex = contex;
+            this.persona = persona;
+            this.cargo=cargo;
+            this.compania= compania;
+            this.Imgpersona = Imgpersona;
+
+        }
         public View getView(int posicion, View v, ViewGroup parent) {
             LayoutInflater inflater = contex.getLayoutInflater();
             View rowView = inflater.inflate(R.layout.personas, null, true);
             tvxNombre = rowView.findViewById(R.id.txvNombre);
-            imgfoto = rowView.findViewById(R.id.imgfotos); tvxNombre.setText(persona[posicion]);
-            imgfoto.setImageResource(Imgpersona[posicion]); return rowView; }}
-}
+            txvcargo= rowView.findViewById(R.id.txvcargo);
+            txvcomapnia= rowView.findViewById(R.id.txvcompa);
+            imgfoto = rowView.findViewById(R.id.imgfotos);
+            tvxNombre.setText(persona[posicion]);
+            txvcargo.setText(cargo[posicion]);
+            txvcomapnia.setText(compania[posicion]);
+            imgfoto.setImageResource(Imgpersona[posicion]); return rowView;
+        }
+    }
+

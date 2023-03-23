@@ -13,8 +13,20 @@
 
     <TextView
         android:id="@+id/txvNombre"
-        android:layout_width="204dp"
-        android:layout_height="37dp"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txvcompa"
+        android:layout_width="236dp"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txvcargo"
+        android:layout_width="233dp"
+        android:layout_height="wrap_content"
         android:text="TextView" />
 
 </LinearLayout>
