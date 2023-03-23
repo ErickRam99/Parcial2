@@ -27,7 +27,8 @@ public class MainActivity extends AppCompatActivity {
     };
     ListView lvstEmpleado;
 
-            Integer[]Imgempleado={ R.drawable.lead_photo_1,
+            Integer[]Imgempleado={
+                    R.drawable.lead_photo_1,
                     R.drawable.lead_photo_2,
                     R.drawable.lead_photo_3,
                     R.drawable.lead_photo_4,
